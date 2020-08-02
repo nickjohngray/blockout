@@ -1,0 +1,15 @@
+.idea/
+*.iml
+.DS_Store
+node_modules
+.awcache
+*.log
+.yarnrc
+.yarn.lock
+coverage
+.history
+.vscode/
+build/
+.npmrc
+
+

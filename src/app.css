@@ -1,0 +1,15 @@
+body {
+    font-weight: 300;
+
+    margin: 0;
+    padding: 0;
+    font: 400 10px CoreSans, Arial, sans-serif;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    color: #fff;
+    background-color: #000000;
+}
+
+div {
+    padding: 10px;
+}
