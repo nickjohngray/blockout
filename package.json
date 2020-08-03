@@ -1,6 +1,6 @@
 {
   "name": "blockout",
-  "version": "1.0.24",
+  "version": "1.0.25",
   "description": "Building Blocks for React that think outside the box",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
