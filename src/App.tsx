@@ -1,7 +1,7 @@
 import React, {FC} from 'react'
 import './app.css'
 import ContentToggler from './ContentToggler/ContentToggler'
-//@ts-ignore
+// @ts-ignore
 import logo from './images/blockoutlogo.png'
 import './app.css';
 

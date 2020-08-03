@@ -1,8 +1,9 @@
 /* eslint-disable import/export */
 
-export { default as ContentToggler } from './ContentToggler'
+export { default as ContentToggler } from './ContentToggler';
 export * from './ContentToggler';
 
-export { default as Tree } from './Tree'
+export { default as Tree } from './Tree';
 export * from './Tree';
 
+export const Greeter = (name: string) => `Hello ${name}`;

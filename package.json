@@ -1,28 +1,34 @@
 {
   "name": "blockout",
-  "repository": "git+https://github.com/nickjohngray/blockout.git",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "Building Blocks for React that think outside the box",
-  "types": "index.d.ts",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "upload": "npm publish",
+    "test": "jest --config jestconfig.json",
+    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "lint": "tslint -p tsconfig.json",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm test && npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": "git+https://github.com/nickjohngray/blockout.git",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@nickjohngray"
   },
+  "files": [
+    "lib/**/*"
+  ],
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node"
   },
-  "main": "build/index.js",
-  "module": "build/index.es.js",
-  "jsnext:main": "build/index.es.js",
   "prepublishOnly": "npm run build && cp -r ./build/* . && rm -rf ./build",
   "postpublish": "git clean -fd",
-  "scripts": {
-    "start": "webpack-dev-server --mode development --devtool inline-source-map --hot",
-    "build2": "webpack --mode production",
-    "deploy": "npm publish",
-    "build": "rollup -c",
-    "test": "jest"
-  },
   "keywords": [
     "typescript",
     "github packages",
@@ -39,35 +45,13 @@
     "@types/jest": "^26.0.8",
     "@types/react": "^16.9.44",
     "@types/react-dom": "^16.9.8",
-    "@types/react-test-renderer": "^16.9.2",
-    "awesome-typescript-loader": "^5.2.1",
-    "babel-eslint": "^10.1.0",
-    "babel-loader": "^8.1.0",
-    "babel-polyfill": "^6.26.0",
-    "clean-webpack-plugin": "^3.0.0",
-    "copy-webpack-plugin": "^6.0.3",
-    "css-loader": "^4.2.0",
     "eslint": "^7.5.0",
-    "file-loader": "^6.0.0",
-    "html-webpack-plugin": "^4.3.0",
     "jest": "^26.2.2",
-    "mini-css-extract-plugin": "^0.9.0",
-    "react-hot-loader": "^4.12.21",
-    "react-scripts-ts": "^3.1.0",
-    "react-test-renderer": "^16.13.1",
-    "rollup": "^2.23.0",
-    "rollup-plugin-commonjs": "^10.1.0",
-    "rollup-plugin-node-resolve": "^5.2.0",
-    "rollup-plugin-peer-deps-external": "^2.2.3",
-    "rollup-plugin-typescript2": "^0.27.1",
-    "source-map-loader": "^0.2.4",
-    "style-loader": "^0.23.0",
+    "prettier": "^2.0.5",
     "ts-jest": "^26.1.4",
-    "typescript": "^3.4.5",
-    "url-loader": "^4.1.0",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^3.4.5"
   },
   "peerDependencies": {
     "react": "^16.13.1",
