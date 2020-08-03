@@ -35,7 +35,7 @@ like in our case, a commit and a new version-tag will be made every time you bum
 This command will run BEFORE the commit is made. 
 A  formatter could be run at this stage so no ugly code will pass into the new version:
 
-### npm version patch
+### npm version patch 
 Bump a new patch version of the package
 The preversion, version, and postversion will run
 and create a new tag in git and push it to the remote repository. 
