@@ -40,7 +40,7 @@ Bump a new patch version of the package
 The preversion, version, and postversion will run
 and create a new tag in git and push it to the remote repository. 
 
-### npm push 
+### npm push  
 npm push will run npm deploy, if eveything is good ( tslint and tests pass)
 a new version is deployed.
 
