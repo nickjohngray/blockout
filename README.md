@@ -5,17 +5,15 @@
   | ___ \| |    | | | || |    |    \  | | | || | | |  | |  
   | |_/ /| |____\ \_/ /| \__/\| |\  \ \ \_/ /| |_| |  | |  
   \____/ \_____/ \___/  \____/\_| \_/  \___/  \___/   \_/                                                             
-              Building Blocks that think outside the box                                               
+              Building Blocks that REACT outside the box                                               
 </pre>
 
-## React Components that you can fully customise. Including  the BLEEPin stryles!!!! 
-
- 
-#### See examples by running yarn start
-
-
-I will add all my reusable components here
-
+######BlockOut is a React Component Library that makes  styling grate again
+By styles, I mean css styles, in the pass I have worked with many other 
+React component libraries   and I have found 
+very difficult  to style  and use.  I'll update this readme after adding each componet.
+I know there is just a Toggler Component right now, but all this is going to change
+when BlockOut makes coding grate again.
 
 Contact me nickjohngray@gmail.com for help.
 
