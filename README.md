@@ -25,22 +25,34 @@ Contact me nickjohngray@gmail.com for help.
 prepublishOnly will run BEFORE prepare and ONLY on npm publish. 
 It will run the test and lint to make sure it  doesn't publish bad code.
 
-### preversion : npm run lint
-preversion will run before bumping a new package version. 
+### bump
+
+npm version patch 
+npm run bump, bumps a new version,
+triggers preversion version postversion in this order
+ensure git status is clean and the code is commied before running
+
+### preversion
+npm run lint - preversion 
+
+runs before bumping a new package version. 
 To be 100% sure a new version  with bad code does not get published.
 
-### version : npm run format && git add -A src
-Version will run after a new version is bumped. 
-If your package has a git repository, 
-like in our case, a commit and a new version-tag will be made every time you bump a new version. 
+### version
+npm run format && git add -A src 
+ 
+Runs after a new version is bumped. 
+ 
+commits  a new version-tag every time a new version is bumped. 
 This command will run BEFORE the commit is made. 
 A  formatter could be run at this stage so no ugly code will pass into the new version:
 
-## postversion: git push && git push --tags
-Postversion will run after the commit has been made. 
+## postversion: 
+
+git push && git push --tags
+
+Runs after the commit has been made. 
 A perfect place for pushing the commit as well as the tag.
-
-
 
 ### npm version patch 
 Bump a new patch version of the package
