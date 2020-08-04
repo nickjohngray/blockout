@@ -1,6 +1,6 @@
 {
   "name": "blockout",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "description": "Building Blocks for React that think outside the box",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -12,7 +12,7 @@
     "lint": "tslint -p tsconfig.json",
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
-    "bump" : "npm version patch",
+    "bump": "npm version patch",
     "preversion": "npm run lint",
     "version": "npm run format && git add -A src",
     "postversion": "git push && git push --tags"
